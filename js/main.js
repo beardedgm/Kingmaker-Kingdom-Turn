@@ -1,5 +1,6 @@
 import { kingdom, turnData, history, saveState, loadState } from "./state.js";
-import { renderAll, debouncedRenderAll, initEventListeners } from "./rendering.js";
+import { renderAll, debouncedRenderAll } from "./rendering.js";
+import { initEventListeners } from "./events.js";
 import { clearTurn, calculateAndRenderCreationScores } from "./turn.js";
 import { DATA_VERSION } from "./constants.js";
 
