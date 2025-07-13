@@ -3,6 +3,7 @@ import { renderAll, debouncedRenderAll } from "./rendering.js";
 import { initEventListeners } from "./events.js";
 import { clearTurn, calculateAndRenderCreationScores } from "./turn.js";
 import { DATA_VERSION } from "./constants.js";
+import { safeOperation } from "./utils.js";
 
 // ==========================================
 
