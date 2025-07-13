@@ -1,5 +1,5 @@
 import { kingdom, turnData, history, A11yHelpers } from "./state.js";
-import { availableStructures, structureColors, KINGDOM_GOVERNMENTS, KINGDOM_CHARTERS, KINGDOM_HEARTLANDS, KINGDOM_FEATS, PROFICIENCY_RANKS, KINGDOM_SIZE_TABLE, KINGDOM_SKILLS } from "./constants.js";
+import { availableStructures, structureColors, KINGDOM_GOVERNMENTS, KINGDOM_CHARTERS, KINGDOM_HEARTLANDS, KINGDOM_FEATS, PROFICIENCY_RANKS, KINGDOM_SIZE_TABLE, KINGDOM_SKILLS, KINGDOM_ACTIVITIES } from "./constants.js";
 import { calculateStructureBonuses, calculateSkillModifiers, calculateControlDC, calculateConsumption, isSettlementOvercrowded } from "./calculations.js";
 import { Validators, handleValidatedInput, debounce } from "./utils.js";
 
