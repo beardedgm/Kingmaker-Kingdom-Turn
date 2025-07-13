@@ -1,4 +1,4 @@
-import { kingdom, turnData, history, A11yHelpers } from "./state.js";
+import { kingdom, turnData, history, A11yHelpers, setTurnData } from "./state.js";
 import { KINGDOM_ACTIVITIES, KINGDOM_SIZE_TABLE, RANDOM_KINGDOM_EVENTS } from "./constants.js";
 import { calculateConsumption, updateRuin } from "./calculations.js";
 import { showConfirmationModal } from "./rendering.js";
@@ -115,7 +115,7 @@ export function updateSkillInvestmentDropdowns() {
 // ==========================================
 
 export function clearTurn() {
-    turnData = {
+    setTurnData({
         turnFame: kingdom.fame + 1,
         turnUnrest: kingdom.unrest,
         turnResourcePoints: 0,
@@ -125,7 +125,7 @@ export function clearTurn() {
         rolledResources: false,
         paidConsumption: false,
         eventChecked: false // <-- Add this line
-    };
+    });
     for (const category in KINGDOM_ACTIVITIES) {
         KINGDOM_ACTIVITIES[category].forEach(activityName => {
             const key = `activity_${activityName.replace(/\s+/g, '_')}`;

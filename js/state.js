@@ -94,6 +94,10 @@ export let kingdom = {};
 export let turnData = {};
 export let history = [];
 
+export function setTurnData(newData) {
+  turnData = newData;
+}
+
 export function generateDefaultAdvancement() {
   const advancement = {};
   for (let i = 2; i <= 20; i++) {
